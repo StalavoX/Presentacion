@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protege tu Vida Digital - Portal O.S. GROUP</title>
+  
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+  <!-- CABECERA CORPORATIVA -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="company-brand">
+          <img id="company-logo" class="company-logo hidden" src="assets/logo.png" alt="Logotipo O.S. GROUP">
+          <span id="company-logo-fallback" class="company-logo-fallback"><i class="fa-solid fa-shield-halved"></i><span>O.S. GROUP</span></span>
+        </div>
+        <div class="h-6 w-px bg-slate-200 hidden sm:block"></div>
+        <span class="text-xs sm:text-sm font-semibold text-slate-600 hidden sm:block">ALIADO ESTRATÉGICO DE TI</span>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <span class="text-xs font-bold bg-orange-50 text-orange-700 px-3 py-1.5 rounded-full border border-orange-200">
+          Expositor: Steven Alexander Avilés
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL DE LA PRESENTACIÓN -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
+    <nav class="view-tabs" role="tablist" aria-label="Secciones de la capacitación">
+      <button id="presentation-tab" class="view-tab active" type="button" role="tab" aria-selected="true" aria-controls="presentation-view" onclick="switchAppView('presentation')">
+        <i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>
+        <span>Presentación</span>
+      </button>
+      <button id="assessment-tab" class="view-tab" type="button" role="tab" aria-selected="false" aria-controls="assessment-view" onclick="switchAppView('assessment')">
+        <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+        <span>Evalúa tus hábitos</span>
+      </button>
+      <button id="simulator-tab" class="view-tab" type="button" role="tab" aria-selected="false" aria-controls="simulator-view" onclick="switchAppView('simulator')">
+        <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+        <span>Simulador</span>
+      </button>
+    </nav>
+
+    <div id="presentation-view" class="presentation-view" role="tabpanel" aria-labelledby="presentation-tab">
+    <!-- BARRA SUPERIOR DE CONTROL DE DIAPOSITIVAS -->
+    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-wrap items-center justify-between gap-4 mb-4">
+      <div class="flex items-center space-x-3">
+        <span class="bg-orange-600 text-white font-bold text-xs px-2.5 py-1 rounded-full" id="slide-badge">
+          Diapositiva 1 de 16
+        </span>
+        <h2 class="text-sm font-bold text-slate-700 hidden md:block" id="slide-header-title">Portada Corporativa</h2>
+      </div>
+
+      <!-- BOTONES DE NAVEGACIÓN Y MODO PRESENTADOR -->
+      <div id="slide-controls" class="flex items-center space-x-2">
+        <button id="presentation-button" onclick="togglePresentationMode()" aria-pressed="false" title="Iniciar presentación (F)" class="px-3 py-1.5 text-xs font-bold text-white bg-slate-900 hover:bg-slate-700 rounded-lg flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-expand"></i>
+          <span id="presentation-button-label">Presentar</span>
+        </button>
+        <button id="external-presenter-button" onclick="openExternalPresenter()" aria-label="Abrir notas privadas del presentador" title="Abre las notas en una ventana aparte para mantenerlas fuera de la pantalla proyectada" class="px-3 py-1.5 text-xs font-bold text-orange-600 bg-orange-50 hover:bg-orange-100 border border-orange-200 rounded-lg flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-note-sticky"></i>
+          <span>Notas privadas</span>
+        </button>
+        <button onclick="prevStep()" class="px-3 py-1.5 bg-slate-100 text-slate-700 font-bold rounded-lg text-xs hover:bg-slate-200 transition flex items-center gap-1">
+          <i class="fa-solid fa-chevron-left"></i>
+          <span>Anterior</span>
+        </button>
+        <span class="text-xs font-bold text-slate-500 px-1" id="step-counter">
+          Tarjeta 1/1
+        </span>
+        <button onclick="nextStep()" class="px-4 py-1.5 bg-orange-600 text-white font-bold rounded-lg text-xs hover:bg-orange-700 transition flex items-center gap-1 shadow-sm">
+          <span>Siguiente Tarjeta</span>
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- TARJETA DE LA DIAPOSITIVA (TEMA BLANCO Y TÍTULOS NARANJA) -->
+    <div class="flex-1 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col justify-between min-h-[500px]" id="slide-container">
+      
+      <!-- ENCABEZADO -->
+      <div class="slide-heading">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-orange-600" id="slide-category">MÓDULO 1: INTRODUCCIÓN</span>
+          <span class="text-xs font-semibold text-slate-400" id="slide-number-indicator">01 / 16</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-orange-600 mb-6" id="slide-main-title">
+          Protege tu Vida Digital
+        </h1>
+        <img id="slide-artwork" class="slide-artwork artwork-enter" src="assets/visual-intro.svg" alt="Ilustración de ciberseguridad y protección digital">
+      </div>
+
+      <!-- CONTENEDOR DE TARJETAS (REVELACIÓN PASO A PASO) -->
+      <div id="slide-cards-wrapper" class="my-auto space-y-4" aria-live="polite" aria-atomic="true">
+        <!-- Inyección dinámica con JS -->
+      </div>
+
+      <!-- PIE DE PÁGINA -->
+      <div class="slide-footer pt-5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 mt-6">
+        <div class="flex items-center gap-3">
+          <img class="footer-logo" src="assets/logo.png" alt="Logotipo O.S. GROUP">
+          <span class="footer-divider" aria-hidden="true"></span>
+          <span class="font-semibold text-slate-600">Aliado Estratégico de TI</span>
+        </div>
+        <div class="footer-caption"><span class="footer-caption-mark" aria-hidden="true"></span>Capacitación Ciberseguridad &amp; Resiliencia 2026</div>
+      </div>
+    </div>
+
+    </div>
+
+    <section id="assessment-view" class="assessment-view" role="tabpanel" aria-labelledby="assessment-tab" hidden>
+      <div class="assessment-hero">
+        <div class="assessment-hero-copy">
+          <span class="assessment-eyebrow"><i class="fa-solid fa-lock" aria-hidden="true"></i> AUTOEVALUACIÓN PERSONAL</span>
+          <h1>¿Qué tan protegidos están tus hábitos digitales?</h1>
+          <p>Responde con honestidad para revisar tus hábitos y elegir un próximo paso práctico.</p>
+        </div>
+        <div class="assessment-hero-art" aria-hidden="true">
+          <i class="fa-solid fa-user-shield"></i>
+          <span><i class="fa-solid fa-check"></i></span>
+        </div>
+      </div>
+
+      <div class="assessment-disclaimer" role="note">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        <p>Esta herramienta es orientativa: mide hábitos que tú reportas, no analiza tus dispositivos ni predice la probabilidad real de sufrir un ataque. Tus respuestas solo se procesan en esta página y no se envían ni se guardan.</p>
+      </div>
+
+      <form id="assessment-form" class="assessment-form" novalidate>
+        <div class="assessment-progress">
+          <div>
+            <strong>Tu evaluación</strong>
+            <span id="assessment-progress-text">0 de 10 respondidos</span>
+          </div>
+          <div class="assessment-progress-track" role="progressbar" aria-label="Progreso de la evaluación" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+            <span id="assessment-progress-fill"></span>
+          </div>
+        </div>
+        <div id="assessment-questions" class="assessment-questions"></div>
+        <div class="assessment-actions">
+          <p id="assessment-validation" class="assessment-validation" aria-live="polite">Responde las 10 preguntas para ver tus resultados.</p>
+          <div class="assessment-action-buttons">
+            <button id="assessment-reset" class="assessment-reset" type="reset">
+              <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reiniciar
+            </button>
+            <button id="assessment-submit" class="assessment-submit" type="submit" disabled>
+              Ver mis resultados <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <section id="assessment-results" class="assessment-results" aria-live="polite" aria-labelledby="assessment-results-title" hidden>
+        <div class="assessment-results-heading">
+          <span class="assessment-eyebrow"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> TU RESUMEN</span>
+          <h2 id="assessment-results-title">Tu perfil de hábitos digitales</h2>
+        </div>
+        <div class="assessment-score-grid">
+          <article class="assessment-score-card score-habits">
+            <span class="score-label">Puntaje de hábitos declarados</span>
+            <strong id="habits-score">0%</strong>
+            <span id="habits-level"></span>
+            <div class="score-meter" role="progressbar" aria-label="Puntaje orientativo de hábitos declarados" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span id="habits-meter"></span>
+            </div>
+          </article>
+        </div>
+        <p class="assessment-result-caveat"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Este puntaje resume únicamente tus respuestas; <strong>no mide tu exposición ni predice la probabilidad de un incidente</strong>.</p>
+        <div class="assessment-feedback">
+          <h3><i class="fa-solid fa-list-check" aria-hidden="true"></i> Próximos pasos recomendados</h3>
+          <ul id="assessment-recommendations"></ul>
+        </div>
+        <button id="assessment-edit" class="assessment-edit" type="button">
+          <i class="fa-solid fa-pen" aria-hidden="true"></i> Revisar mis respuestas
+        </button>
+      </section>
+
+      <footer class="assessment-footer">
+        <img class="footer-logo" src="assets/logo.png" alt="Logotipo O.S. GROUP">
+        <span>Pequeños hábitos constantes hacen una gran diferencia.</span>
+      </footer>
+    </section>
+
+    <section id="simulator-view" class="simulator-view" role="tabpanel" aria-labelledby="simulator-tab" hidden>
+      <div class="simulator-hero">
+        <div>
+          <span class="assessment-eyebrow"><i class="fa-solid fa-bolt" aria-hidden="true"></i> RETO INTERACTIVO</span>
+          <h1>¿Qué harías en esta situación?</h1>
+          <p>Lee el mensaje, llamada o solicitud y elige cómo actuarías. Recibirás una explicación después de cada decisión.</p>
+        </div>
+        <div class="simulator-score" aria-label="Puntaje actual">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <span><strong id="simulator-score">0</strong><small> puntos</small></span>
+        </div>
+      </div>
+
+      <div class="simulator-privacy" role="note">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        <span>Práctica segura: los mensajes son ficticios. El enlace sospechoso es solo texto y no se puede abrir. Tus respuestas no se guardan ni se envían.</span>
+      </div>
+
+      <div id="simulator-game" class="simulator-game">
+        <div class="simulator-progress">
+          <div class="simulator-progress-meta">
+            <span id="simulator-case-counter">CASO 1 DE 4</span>
+            <span id="simulator-progress-label">0 de 4 decisiones</span>
+          </div>
+          <div class="assessment-progress-track" role="progressbar" aria-label="Progreso del simulador" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0">
+            <span id="simulator-progress-fill"></span>
+          </div>
+        </div>
+
+        <article id="simulator-case-card" class="simulator-case-card" aria-live="polite">
+          <div class="simulator-case-heading">
+            <span id="simulator-case-icon" class="simulator-case-icon" aria-hidden="true"></span>
+            <div>
+              <span id="simulator-case-channel" class="simulator-case-channel"></span>
+              <h2 id="simulator-case-title" tabindex="-1"></h2>
+            </div>
+          </div>
+          <div id="simulator-scene" class="simulator-scene"></div>
+          <p id="simulator-prompt" class="simulator-prompt">¿Qué harías?</p>
+          <button id="simulator-hint-toggle" class="simulator-hint-toggle" type="button" aria-expanded="false" aria-controls="simulator-hint">Ver una pista</button>
+          <p id="simulator-hint" class="simulator-hint" hidden></p>
+          <div id="simulator-choices" class="simulator-choices"></div>
+          <div id="simulator-feedback" class="simulator-feedback" aria-live="assertive" hidden></div>
+          <button id="simulator-next" class="assessment-submit simulator-next" type="button" hidden>
+            Siguiente caso <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </article>
+      </div>
+
+      <section id="simulator-results" class="simulator-results" aria-live="polite" hidden>
+        <div id="simulator-results-icon" class="simulator-results-icon" aria-hidden="true"></div>
+        <span class="assessment-eyebrow">RETO COMPLETADO</span>
+        <h2 id="simulator-results-title" tabindex="-1"></h2>
+        <p id="simulator-results-message"></p>
+        <div class="simulator-final-score"><strong id="simulator-final-score">0/4</strong><span>decisiones seguras</span></div>
+        <button id="simulator-restart" class="assessment-submit" type="button">
+          <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Jugar de nuevo
+        </button>
+      </section>
+
+      <footer class="assessment-footer">
+        <img class="footer-logo" src="assets/logo.png" alt="Logotipo O.S. GROUP">
+        <span>Detente, verifica y reporta: la seguridad empieza con una decisión.</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- LÓGICA DE DATOS Y NAVEGACIÓN EN JAVASCRIPT -->
+  <script src="js/slides.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/assessment.js" defer></script>
+  <script src="js/simulator.js" defer></script>
+</body>
+</html>

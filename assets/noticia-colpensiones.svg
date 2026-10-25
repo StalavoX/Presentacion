@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración editorial: monitoreo de ciberseguridad</title>
+  <desc id="desc">Pantalla de monitoreo con alertas de intentos de acceso y un escudo.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#background)"/>
+  <circle cx="90" cy="55" r="3" fill="#60a5fa"/>
+  <circle cx="565" cy="95" r="4" fill="#38bdf8"/>
+  <circle cx="520" cy="350" r="3" fill="#60a5fa"/>
+  <rect x="62" y="68" width="390" height="250" rx="18" fill="#172554" stroke="#60a5fa" stroke-width="5"/>
+  <path d="M95 260h55l28-62 34 34 34-85 36 113 34-53 29 39h65" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M95 112h126M95 140h82" stroke="#64748b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M257 112h150M257 140h94" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M195 318v30m125-30v30m-164 0h205" stroke="#93c5fd" stroke-width="8" stroke-linecap="round"/>
+  <path d="m500 140 76 27v61c0 53-34 90-76 110-42-20-76-57-76-110v-61z" fill="#fff" stroke="#38bdf8" stroke-width="8" stroke-linejoin="round"/>
+  <path d="m464 224 26 26 50-59" fill="none" stroke="#16a34a" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="54" y="391" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2">DETECCIÓN · MONITOREO · RESPUESTA</text>
+</svg>

@@ -1,0 +1,30 @@
+LOGO DE LA EMPRESA
+
+Coloca el logotipo en esta carpeta con el nombre:
+
+  logo.png
+
+La presentación lo cargará automáticamente desde assets/logo.png.
+Se recomienda una imagen PNG transparente, SVG o WebP. Si usas otro nombre
+o formato, actualiza la ruta del archivo en index.html.
+
+Si el archivo no está presente, se mostrará el logotipo tipográfico temporal.
+
+COMPILAR LA PRESENTACIÓN
+
+La página usa dependencias locales para sus estilos y sus iconos. Desde la
+carpeta raíz del proyecto, ejecuta una vez:
+
+  npm install
+  npm run build
+
+Después abre index.html en un navegador moderno. No se necesita conexión para
+ver las diapositivas, la autoevaluación ni el simulador; los enlaces a fuentes
+externas sí requieren conexión.
+
+NOTAS DEL EXPOSITOR
+
+Abre «Notas privadas» antes de presentar. Las notas se muestran en una ventana
+separada y no forman parte de las diapositivas. Si compartes toda la pantalla,
+la ventana podría quedar visible: utiliza un monitor privado o comparte solo
+la ventana de la presentación.
