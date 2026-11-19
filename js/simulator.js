@@ -84,6 +84,28 @@ const securityScenarios = [
         feedback: 'Correcto. No compartas datos personales o confidenciales sin autorización. Sigue la política de la organización y utiliza solo herramientas aprobadas, con las condiciones de privacidad adecuadas.'
       }
     ]
+  },
+  {
+    channel: 'SMS / DOMINIO HOMÓGRAFO',
+    icon: 'fa-solid fa-globe',
+    title: 'Caso E: Una letra que parece igual',
+    sender: 'Mensaje recibido · Supuesta alerta de pagos',
+    message: 'Se detectó actividad inusual. Confirma tus datos para evitar el bloqueo en el dominio que aparece debajo.',
+    url: 'pаgo.example',
+    hint: 'Compara las letras del dominio. ¿La “a” es latina? El destino es solo texto de ejemplo, no lo abras.',
+    prompt: '¿Qué harías?',
+    choices: [
+      {
+        label: 'Abrirlo porque el nombre parece decir “pago” y el aviso es urgente.',
+        correct: false,
+        feedback: 'No confíes en la apariencia ni en la urgencia. Un dominio puede usar letras de otros alfabetos que se parecen a las latinas. No ingreses datos desde el mensaje; verifica con la aplicación o el sitio oficial.'
+      },
+      {
+        label: 'No abrir el mensaje; entrar desde la aplicación o un marcador oficial y reportarlo.',
+        correct: true,
+        feedback: 'Correcto. En “pаgo.example”, la “а” es cirílica (U+0430), no la “a” latina (U+0061). El dominio .example es de uso didáctico y no es un sitio real. Accede al servicio por una ruta oficial y reporta el mensaje sospechoso.'
+      }
+    ]
   }
 ];
 
@@ -260,7 +282,7 @@ function showSimulatorResults() {
     icon = 'fa-solid fa-shield-halved';
     title = '¡Excelente criterio!';
     message = 'Identificaste todas las decisiones seguras. Mantén la pausa, verifica por canales oficiales y reporta lo sospechoso.';
-  } else if (simulatorScore >= 2) {
+  } else if (simulatorScore >= Math.ceil(securityScenarios.length / 2)) {
     icon = 'fa-solid fa-shield-halved';
     title = '¡Buen trabajo! Sigue practicando.';
     message = 'Reconociste varias señales de alerta. Revisa los casos que te hicieron dudar y vuelve a intentarlo para reforzar el hábito.';

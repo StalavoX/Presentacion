@@ -68,32 +68,47 @@ window.slidesData = [
       {
         id: 3,
         category: "MÓDULO 1: INTRODUCCIÓN",
-        title: "Glosario Rápido de Ciberseguridad",
+        title: "Glosario de Ciberseguridad",
         cards: [
           {
-            title: "Conceptos Clave en 1 Minuto",
+            title: "Engaños y suplantación",
             type: "info",
             content: `
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
-                  <span class="text-xs font-bold text-orange-600 block mb-1"><i class="fa-solid fa-fish"></i> Phishing</span>
-                  <p class="text-xs text-slate-600">Engaño mediante mensajes o correos para robar claves o dinero.</p>
-                </div>
-                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
-                  <span class="text-xs font-bold text-red-600 block mb-1"><i class="fa-solid fa-lock text-red-500"></i> Ransomware</span>
-                  <p class="text-xs text-slate-600">Malware que bloquea o cifra información y busca extorsionar a la víctima.</p>
-                </div>
-                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
-                  <span class="text-xs font-bold text-blue-600 block mb-1"><i class="fa-solid fa-key"></i> MFA (Doble Factor)</span>
-                  <p class="text-xs text-slate-600">Segunda cerradura de acceso (código o huella) requerida tras la clave.</p>
-                </div>
-                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
-                  <span class="text-xs font-bold text-emerald-600 block mb-1"><i class="fa-solid fa-rotate-right"></i> Ciberresiliencia</span>
-                  <p class="text-xs text-slate-600">Capacidad de responder, adaptarse y seguir operando tras sufrir un ataque.</p>
-                </div>
-              </div>
+              <div class="glossary-terms"><span>Phishing</span><span>Smishing</span><span>Vishing</span><span>Quishing</span><span>AiTM</span></div>
             `,
-            notes: "Recorre cada término con una explicación cotidiana. Phishing es un engaño que intenta que compartamos información o hagamos algo; ransomware es software malicioso que puede bloquear o cifrar información para extorsionar; MFA agrega una comprobación de identidad además de la contraseña; y ciberresiliencia es la capacidad de prepararse, responder y recuperarse. Subraya que las definiciones ayudan a conversar, pero no hace falta memorizar siglas. Puedes pedir al grupo que diga cuál de estos conceptos ya había encontrado. Si aparece una pregunta técnica, responde al nivel necesario para entender el riesgo y vuelve a la acción práctica que puede tomar la persona. Por ejemplo, ante un mensaje sospechoso no es necesario diagnosticar qué tipo de malware hay: basta con no continuar, no compartir códigos y reportar. La palabra resiliencia también permite recordar que prepararse y recuperarse importa tanto como intentar prevenir."
+            notes: "Phishing es el engaño general; smishing llega por mensajes de texto, vishing por llamadas y quishing mediante códigos QR. AiTM describe una modalidad de intermediario que intenta capturar credenciales o una sesión. El canal cambia, pero conviene aplicar la misma regla: pausar y verificar por una vía independiente."
+          },
+          {
+            title: "Software malicioso",
+            type: "problem",
+            content: `
+              <div class="glossary-terms"><span>Malware</span><span>Ransomware</span></div>
+            `,
+            notes: "Malware es el nombre general para software malicioso. Ransomware es un tipo de malware que puede bloquear archivos y usarse para extorsionar. Si se sospecha un incidente, se reporta pronto y se siguen las indicaciones del equipo responsable."
+          },
+          {
+            title: "Acceso y contraseñas",
+            type: "info",
+            content: `
+              <div class="glossary-terms"><span>MFA</span><span>Passkey</span><span>Gestor de contraseñas</span></div>
+            `,
+            notes: "MFA añade otra comprobación de identidad; passkey permite iniciar sesión con una credencial protegida por el dispositivo; un gestor ayuda a crear y guardar contraseñas únicas. Para el trabajo, utiliza únicamente las opciones aprobadas y no aceptes solicitudes de acceso que no iniciaste."
+          },
+          {
+            title: "IA e identidad",
+            type: "problem",
+            content: `
+              <div class="glossary-terms"><span>Deepfake</span><span>Clonación de voz</span></div>
+            `,
+            notes: "Un deepfake puede generar o alterar voz, imagen o video para imitar a alguien. Una voz familiar no confirma quién hace una solicitud: ante pedidos sensibles, verifica por otro canal conocido."
+          },
+          {
+            title: "Privacidad y resiliencia",
+            type: "problem",
+            content: `
+              <div class="glossary-terms"><span>Sobreexposición</span><span>Fuga de datos</span><span>Ciberresiliencia</span></div>
+            `,
+            notes: "Sobreexposición es compartir más información de la necesaria; una fuga de datos es la exposición de información a personas no autorizadas. Ciberresiliencia es prepararse, responder y recuperarse. Si algo se comparte por error, reportarlo pronto ayuda a limitar el impacto."
           }
         ]
       },
@@ -103,32 +118,49 @@ window.slidesData = [
         title: "El factor humano: una oportunidad para prevenir",
         cards: [
           {
-            title: "Reconocer, pausar y verificar",
+            title: "1. Reconocer",
             type: "info",
             content: `
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="p-5 bg-orange-50 rounded-xl border border-orange-200 text-center">
-                  <i class="fa-solid fa-magnifying-glass text-3xl text-orange-600 mb-3"></i>
-                  <h4 class="text-sm font-bold text-slate-800">1. Reconocer</h4>
-                  <p class="text-xs text-slate-600 mt-2">Observa remitente, enlace, adjunto y solicitud.</p>
-                </div>
-                <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 text-center">
-                  <i class="fa-solid fa-hand text-3xl text-blue-600 mb-3"></i>
-                  <h4 class="text-sm font-bold text-slate-800">2. Pausar</h4>
-                  <p class="text-xs text-slate-600 mt-2">Desconfía de la urgencia y no entregues códigos.</p>
-                </div>
-                <div class="p-5 bg-emerald-50 rounded-xl border border-emerald-200 text-center">
-                  <i class="fa-solid fa-circle-check text-3xl text-emerald-600 mb-3"></i>
-                  <h4 class="text-sm font-bold text-slate-800">3. Verificar</h4>
-                  <p class="text-xs text-slate-600 mt-2">Confirma por un canal oficial que ya conozcas.</p>
+              <div class="human-step-card human-step-recognize">
+                <span class="human-step-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
+                <div>
+                  <strong>Observa antes de actuar</strong>
+                  <p>Revisa quién escribe, qué solicita y si el enlace o adjunto coincide con lo que esperabas.</p>
                 </div>
               </div>
-              <p class="mt-4 text-center text-xs text-slate-600">La tecnología ayuda; reportar un error rápidamente también reduce el impacto.</p>
-              <div class="news-links slide-sources mt-3">
+            `,
+            notes: "Introduce el primer paso sin culpar a las personas: los engaños están diseñados para parecer normales. Antes de abrir un enlace o responder, observa quién contacta, qué solicita y si esperabas ese mensaje. Una solicitud urgente no demuestra por sí sola que sea fraudulenta, pero es una buena razón para revisar el contexto."
+          },
+          {
+            title: "2. Pausar",
+            type: "problem",
+            content: `
+              <div class="human-step-card human-step-pause">
+                <span class="human-step-icon"><i class="fa-solid fa-hand" aria-hidden="true"></i></span>
+                <div>
+                  <strong>Rompe la presión del momento</strong>
+                  <p>No respondas por impulso, no compartas códigos y no apruebes solicitudes de acceso que no iniciaste.</p>
+                </div>
+              </div>
+            `,
+            notes: "La pausa crea tiempo para decidir con calma. Si un mensaje o una llamada presiona para actuar de inmediato, no compartas códigos ni apruebes solicitudes MFA inesperadas. No necesitas demostrar durante la conversación que el contacto es falso; puedes terminar la interacción y comprobarlo por separado."
+          },
+          {
+            title: "3. Verificar",
+            type: "solution",
+            content: `
+              <div class="human-step-card human-step-verify">
+                <span class="human-step-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                <div>
+                  <strong>Confirma por otra vía</strong>
+                  <p>Abre la aplicación oficial o llama a un número conocido. Si te equivocaste, reportarlo pronto también ayuda.</p>
+                </div>
+              </div>
+              <div class="news-links slide-sources mt-4">
                 <a href="https://www.cisa.gov/secure-our-world/recognize-and-report-phishing" target="_blank" rel="noopener noreferrer">Guía de CISA sobre phishing <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
               </div>
             `,
-            notes: "Introduce la idea sin culpar a las personas: los engaños están diseñados para parecer normales y aprovechar la prisa o la confianza. Presenta los tres pasos como una rutina fácil de recordar: observar quién escribe y qué solicita, detenerse antes de actuar y confirmar por un canal oficial que ya conocemos. Una solicitud urgente no demuestra por sí sola que sea fraudulenta, pero sí es una buena razón para verificar. Pregunta al grupo qué detalle les haría pausar antes de abrir un enlace o responder. Puedes modelar el proceso con una situación cotidiana: llega un aviso inesperado que pide actualizar una cuenta hoy mismo. Primero observa el remitente, el enlace y el tipo de información solicitada; luego evita responder desde el propio mensaje; finalmente abre la aplicación o el sitio oficial por una ruta habitual. El objetivo no es detectar todas las señales a simple vista, sino crear tiempo para comprobar antes de actuar. Si alguien se equivoca, reportar pronto sigue siendo útil."
+            notes: "Verifica con un canal independiente que ya conozcas, como la aplicación oficial o un número guardado. No uses los datos de contacto incluidos en el mensaje sospechoso. Cierra la secuencia recordando que reportar pronto es útil incluso si alguien hizo clic o compartió información por error."
           }
         ]
       },
@@ -145,8 +177,8 @@ window.slidesData = [
                 <img class="news-image" src="assets/noticia-epm.svg" alt="Ilustración de seguridad digital para la noticia de EPM; no es una fotografía del incidente">
                 <div class="news-copy">
                   <span class="news-kicker">NOTICIA · 29 MAY 2026</span>
-                  <p>EPM informó que un incidente en su contratista SOLATI pudo comprometer información asociada a la cartera. Aclaró que su infraestructura, plataformas y sistemas internos no fueron comprometidos.</p>
-                  <p class="news-lesson"><strong>Aprendizaje:</strong> evaluar y monitorear los riesgos de los proveedores también protege a la organización.</p>
+                  <p>EPM informó que un incidente en su contratista SOLATI pudo comprometer información de cartera. Aclaró que sus sistemas internos no fueron afectados.</p>
+                  <p class="news-lesson"><strong>Aprendizaje:</strong> también hay que gestionar los riesgos de proveedores.</p>
                   <div class="news-links">
                     <a href="https://www.epm.com.co/institucional/sala-de-prensa/noticias-y-novedades/incidente-ciberseguridad-contratista-solati-cartera-epm/" target="_blank" rel="noopener noreferrer">Comunicado de EPM <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                   </div>
@@ -164,8 +196,8 @@ window.slidesData = [
                 <img class="news-image" src="assets/noticia-colpensiones.svg" alt="Ilustración de un centro de monitoreo de ciberseguridad para el caso Colpensiones">
                 <div class="news-copy">
                   <span class="news-kicker">ANTECEDENTE · ABR–MAY 2024</span>
-                  <p>El Tiempo informó que Colpensiones reportó cerca de 53 millones de intentos de ataque entre finales de abril y mayo de 2024, bloqueados sin afectar la información de afiliados y pensionados.</p>
-                  <p class="news-lesson"><strong>Aprendizaje:</strong> una cifra de intentos no equivale a accesos exitosos; importa explicar qué detectó y contuvo la entidad.</p>
+                  <p>Colpensiones reportó 53 millones de intentos bloqueados entre abril y mayo de 2024, sin afectación de datos, según El Tiempo.</p>
+                  <p class="news-lesson"><strong>Aprendizaje:</strong> intentos bloqueados no equivalen a accesos exitosos.</p>
                   <div class="news-links">
                     <a href="https://www.eltiempo.com/economia/sectores/colpensiones-revela-que-enfrento-53-millones-de-ciberataques-entre-abril-y-mayo-de-2024-todos-fueron-bloqueados-sin-afectar-informacion-3505878" target="_blank" rel="noopener noreferrer">Antecedente en El Tiempo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                   </div>
@@ -183,8 +215,8 @@ window.slidesData = [
                 <img class="news-image" src="assets/noticia-ecopetrol.svg" alt="Ilustración de archivos protegidos y una alerta de seguridad para el caso Ecopetrol">
                 <div class="news-copy">
                   <span class="news-kicker">NOTICIA · 30 JUL 2026</span>
-                  <p>EL PAÍS informó que un ataque a almacenamiento en la nube de empresas del grupo Ecopetrol expuso datos asociados a unas 3.300 cuentas de usuario. La compañía no confirmó la autenticidad de todos los documentos descritos por terceros.</p>
-                  <p class="news-lesson"><strong>Aprendizaje:</strong> limitar accesos, proteger datos sensibles y contar con un protocolo de respuesta y comunicación.</p>
+                  <p>EL PAÍS reportó datos expuestos asociados a unas 3.300 cuentas. Ecopetrol no confirmó todos los documentos descritos por terceros.</p>
+                  <p class="news-lesson"><strong>Aprendizaje:</strong> limitar accesos y coordinar la respuesta.</p>
                   <div class="news-links">
                     <a href="https://elpais.com/america-colombia/2026-07-30/un-ciberataque-a-ecopetrol-expone-informacion-del-negocio-y-de-sus-empleados.html" target="_blank" rel="noopener noreferrer">Ver cobertura de EL PAÍS <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                   </div>
@@ -202,87 +234,96 @@ window.slidesData = [
         title: "Entorno Conectado: El Efecto Dominó",
         cards: [
           {
-            title: "1. Tus 4 Entornos Digitales Diarios",
+            title: "1. Finanzas",
             type: "info",
             content: `
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                <div class="p-3 bg-slate-50 border rounded-lg text-center">
-                  <i class="fa-solid fa-building-columns text-orange-600 text-lg mb-1"></i>
-                  <span class="text-xs font-bold block text-slate-800">Finanzas</span>
-                  <span class="text-[10px] text-slate-500">Bancos, Nequi</span>
-                </div>
-                <div class="p-3 bg-slate-50 border rounded-lg text-center">
-                  <i class="fa-solid fa-briefcase text-blue-600 text-lg mb-1"></i>
-                  <span class="text-xs font-bold block text-slate-800">Trabajo</span>
-                  <span class="text-[10px] text-slate-500">Teams, Correo</span>
-                </div>
-                <div class="p-3 bg-slate-50 border rounded-lg text-center">
-                  <i class="fa-solid fa-comments text-emerald-600 text-lg mb-1"></i>
-                  <span class="text-xs font-bold block text-slate-800">Comunicación</span>
-                  <span class="text-[10px] text-slate-500">WhatsApp, Gmail</span>
-                </div>
-                <div class="p-3 bg-slate-50 border rounded-lg text-center">
-                  <i class="fa-solid fa-house text-purple-600 text-lg mb-1"></i>
-                  <span class="text-xs font-bold block text-slate-800">Hogar</span>
-                  <span class="text-[10px] text-slate-500">Compras, Salud</span>
-                </div>
+              <div class="connected-environment-card environment-finance">
+                <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                <div><strong>Finanzas</strong><p>Banca, pagos y servicios financieros.</p></div>
               </div>
             `,
-            notes: "Recorre los cuatro entornos y pide al grupo que piense, sin compartir información privada, qué cuentas importantes usa en cada uno. Señala que el mismo dispositivo puede dar acceso a servicios personales y de trabajo, así que protegerlo ayuda a proteger varias áreas a la vez. Relaciona cada entorno con medidas básicas: usar bloqueo de pantalla, mantener los dispositivos actualizados y proteger las cuentas con métodos aprobados. No se trata de vivir con miedo, sino de aplicar protecciones proporcionales a lo que guardamos. Puedes ilustrar el efecto dominó con el correo: a menudo sirve para restablecer otras cuentas, por lo que protegerlo bien es especialmente importante. Pregunta qué cambiaría si un teléfono compartido o extraviado mantuviera abiertas varias sesiones, y escucha las respuestas sin pedir datos identificables. El mensaje es que los hábitos se refuerzan entre sí: cuidar el dispositivo, la cuenta y la información reduce la exposición de más de un entorno."
+            notes: "Empieza por las cuentas financieras: banca y pagos suelen contener información de alto impacto. Pregunta qué medidas ayudan a protegerlas, sin pedir que nadie comparta nombres de bancos, saldos ni otros datos privados."
           },
           {
-            title: "2. Protege también los dispositivos y las sesiones",
-            type: "problem",
+            title: "2. Trabajo",
+            type: "info",
             content: `
-              <div class="p-4 bg-red-50 border border-red-200 rounded-xl">
-                <h4 class="font-bold text-red-900 text-xs flex items-center gap-2 mb-1">
-                  <i class="fa-solid fa-triangle-exclamation text-red-600"></i>
-                  <span>Un dispositivo puede conectar varios entornos</span>
-                </h4>
-                <p class="text-xs text-red-800 leading-relaxed">
-                  Un dispositivo sin bloqueo puede dejar abiertas sesiones de correo, mensajería y trabajo. Bloquea la pantalla, instala actualizaciones y reporta de inmediato la pérdida de un equipo.
-                </p>
+              <div class="connected-environment-card environment-work">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <div><strong>Trabajo</strong><p>Correo, archivos y herramientas de colaboración.</p></div>
               </div>
             `,
-            notes: "Enfatiza el riesgo concreto: un teléfono o portátil perdido y sin bloqueo puede dejar sesiones abiertas de correo, mensajería y trabajo. Pregunta qué deberían hacer si pierden un dispositivo, y refuerza que deben avisar pronto por el canal oficial para que soporte indique los siguientes pasos. Recuerda bloquear la pantalla cuando se deja el equipo y mantenerlo actualizado. Este ejemplo se centra en dispositivos y sesiones; la reutilización de contraseñas se abordará en la sección siguiente. Aclara que no existe una única respuesta técnica que todas las personas deban ejecutar por su cuenta: los equipos corporativos pueden requerir pasos específicos de la organización. Anotar cuándo y dónde se perdió el dispositivo y qué cuenta de soporte contactar puede ayudar a comunicarlo, sin publicar detalles en canales no autorizados. Si el equipo aparece después, también se debe informar y seguir las instrucciones recibidas."
+            notes: "El correo y las herramientas de trabajo pueden abrir acceso a archivos y conversaciones de la organización. Recomienda usar las cuentas y dispositivos según la política interna y reportar de inmediato solicitudes de acceso inesperadas."
+          },
+          {
+            title: "3. Comunicación",
+            type: "info",
+            content: `
+              <div class="connected-environment-card environment-communication">
+                <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                <div><strong>Comunicación</strong><p>Mensajería, correo personal y redes sociales.</p></div>
+              </div>
+            `,
+            notes: "La mensajería y las redes conectan a las personas, pero también pueden usarse para suplantarlas o difundir enlaces engañosos. Comprueba quién envía una solicitud sensible por un canal independiente antes de responder."
+          },
+          {
+            title: "4. Hogar y vida personal",
+            type: "info",
+            content: `
+              <div class="connected-environment-card environment-home">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                <div><strong>Hogar y vida personal</strong><p>Compras, salud, entretenimiento y servicios del hogar.</p></div>
+              </div>
+            `,
+            notes: "Compras, servicios de salud y otros servicios personales también guardan información valiosa. Protege las cuentas importantes con contraseñas únicas y activa MFA cuando esté disponible."
+          },
+          {
+            title: "5. Educación y aprendizaje",
+            type: "info",
+            content: `
+              <div class="connected-environment-card environment-education">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <div><strong>Educación y aprendizaje</strong><p>Plataformas educativas, cursos y cuentas académicas.</p></div>
+              </div>
+            `,
+            notes: "Las plataformas educativas y de aprendizaje también pueden guardar datos personales, trabajos y credenciales. Recomienda entrar desde los canales oficiales y no reutilizar la contraseña de una cuenta importante. Si se comparte un dispositivo para estudiar, cerrar la sesión al terminar ayuda a evitar accesos accidentales. Pregunta: «¿Qué harían antes de iniciar sesión en un equipo compartido?»."
+          },
+          {
+            title: "6. Servicios y trámites digitales",
+            type: "info",
+            content: `
+              <div class="connected-environment-card environment-services">
+                <i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+                <div><strong>Servicios y trámites</strong><p>Portales de servicios, citas y gestiones en línea.</p></div>
+              </div>
+            `,
+            notes: "Añade los portales de servicios y trámites, donde puede haber información de identidad o datos de contacto. Antes de ingresar información, comprueba que abriste el portal oficial, especialmente si llegaste desde un mensaje o un código QR. Evita compartir documentos o códigos de verificación con quien te contacte de forma inesperada. Transición: «En todos estos entornos, un mismo dispositivo puede mantener varias sesiones abiertas»."
+          },
+          {
+            title: "7. Protege el dispositivo que los conecta",
+            type: "problem",
+            content: `
+              <div class="connected-device-card">
+                <div class="connected-device-summary">
+                  <div class="connected-device-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+                  <div class="connected-device-intro">
+                    <strong>Un equipo, varios entornos</strong>
+                    <p>Un teléfono o portátil puede mantener abiertas sesiones personales y de trabajo.</p>
+                  </div>
+                </div>
+                <div class="connected-device-actions">
+                  <div><i class="fa-solid fa-lock" aria-hidden="true"></i><span>Bloquea la pantalla cuando no lo uses.</span></div>
+                  <div><i class="fa-solid fa-rotate" aria-hidden="true"></i><span>Mantén el sistema actualizado.</span></div>
+                  <div><i class="fa-solid fa-bell" aria-hidden="true"></i><span>Reporta pronto si se pierde o queda expuesto.</span></div>
+                </div>
+              </div>
+            `,
+            notes: "Cierra la idea del efecto dominó: un teléfono o portátil puede mantener abiertas sesiones de varios entornos, así que protegerlo ayuda a proteger más de una cuenta. Recorre las tres medidas de la tarjeta y explica su propósito: bloquear la pantalla dificulta el acceso casual, actualizar ayuda a mantener el sistema al día y reportar pronto una pérdida permite que soporte evalúe los siguientes pasos. Para dispositivos corporativos, sigue siempre las instrucciones internas; no indiques borrar datos, cambiar claves o aplicar otras acciones técnicas por cuenta propia. Transición: «Además de cuidar el dispositivo, revisemos cómo protegemos el acceso a las cuentas»."
           }
         ]
       },
       {
         id: 7,
-        category: "MÓDULO 3: AMENAZAS EN LA AUTENTICACIÓN",
-        title: "MFA: protección útil, pero no infalible",
-        cards: [
-          {
-            title: "Cuando un engaño intenta interceptar la sesión",
-            type: "problem",
-            content: `
-              <div class="p-3 bg-red-50 border border-red-200 rounded-lg text-xs space-y-1">
-                <span class="font-bold text-red-900 block">Algunos ataques de phishing retransmiten el inicio de sesión</span>
-                <p class="text-red-800">Una página falsa puede intermediar entre la persona y el servicio legítimo e intentar robar credenciales o tokens de sesión. El MFA común reduce el riesgo, pero no detiene todos los ataques de intermediario.</p>
-              </div>
-            `,
-            notes: "Explica el ataque a nivel conceptual: una página falsa puede colocarse entre la persona y el servicio legítimo, retransmitir el inicio de sesión y tratar de capturar credenciales o una sesión autenticada. No hace falta explicar herramientas ni pasos técnicos; el punto es que una página que parece real puede intentar engañar incluso cuando existe MFA. Aclara que esto no ocurre en todos los ataques y que MFA sigue reduciendo muchos riesgos. La siguiente tarjeta muestra opciones que pueden ofrecer una protección más resistente al phishing. Puedes comparar el proceso con entregar una llave en una recepción falsa: el servicio parece familiar, pero el destino no es el correcto. Por eso hay que comprobar el dominio y llegar a las cuentas desde marcadores o aplicaciones oficiales cuando sea posible. Evita que el ejemplo deje la impresión de que MFA es inútil; es una capa valiosa, y la recomendación es complementarla con métodos adecuados y verificación del contexto."
-          },
-          {
-            title: "Prefiere autenticación resistente al phishing",
-            type: "solution",
-            content: `
-              <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-xs space-y-1">
-                <span class="font-bold text-emerald-900 block">Usa las opciones aprobadas por la organización</span>
-                <ul class="list-disc list-inside space-y-1 text-emerald-800">
-                  <li>Prefiere passkeys o llaves de seguridad cuando estén disponibles.</li>
-                  <li>Si usas notificaciones MFA, aprueba solo las que tú iniciaste.</li>
-                  <li>Rechaza solicitudes inesperadas y avisa a soporte.</li>
-                </ul>
-              </div>
-            `,
-            notes: "Recomienda passkeys o llaves de seguridad cuando estén disponibles y aprobadas por la organización, ya que pueden ayudar a resistir páginas de phishing. Si llega una notificación MFA que la persona no inició, debe rechazarla y reportarla; nunca conviene aprobarla para quitarse la molestia. Pide al grupo que recuerde que soporte puede orientar sobre los métodos permitidos para sus cuentas. Presenta estas opciones como reducción del riesgo, no como garantía absoluta. Diferencia las alternativas sin hacer una competencia de productos: lo esencial es escoger un método permitido y comprender qué hacer ante una solicitud inesperada. Si alguien recibe varias notificaciones seguidas, debe dejar de interactuar con ellas y reportar el evento, no responder a llamadas que pidan códigos. Una buena pregunta para el grupo es: ¿qué harías si aparece una aprobación justo cuando no estás iniciando sesión? La respuesta debe ser rechazar, verificar y avisar."
-          }
-        ]
-      },
-      {
-        id: 8,
         category: "MÓDULO 3: AMENAZAS EN EL CELULAR",
         title: "Engaños Directos: Phishing, Smishing y Vishing",
         cards: [
@@ -321,7 +362,7 @@ window.slidesData = [
         ]
       },
       {
-        id: 9,
+        id: 8,
         category: "MÓDULO 3: AMENAZAS EN EL CELULAR",
         title: "Nuevos Vectores: Quishing (QR) y Sobreexposición",
         cards: [
@@ -350,7 +391,81 @@ window.slidesData = [
         ]
       },
       {
+        id: 9,
+        category: "MÓDULO 3: SUPLANTACIÓN DE IDENTIDAD",
+        title: "Dos engaños distintos: Binance y dominios homógrafos",
+        cards: [
+          {
+            title: "Binance (2026): entrevistas laborales falsas y malware",
+            type: "problem",
+            content: `
+              <div class="p-3 bg-red-50 border border-red-200 rounded-lg text-xs space-y-2">
+                <p class="text-red-900">Reuters y BBC informaron que el robo de aproximadamente <strong>US$6.3 mil millones</strong> a Binance estuvo relacionado con entrevistas de trabajo falsas: los atacantes engañaron a un empleado para que descargara malware presentado como una tarea técnica.</p>
+                <p class="text-red-900"><strong>Importante:</strong> este caso fue ingeniería social y malware; no fue un ataque de caracteres homógrafos.</p>
+                <div class="news-links slide-sources mt-3">
+                  <a href="https://www.reuters.com/world/asia-pacific/binance-hackers-used-fake-job-interview-63-billion-attack-2026-11-03/" target="_blank" rel="noopener noreferrer">Reuters · 3 nov. 2026 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  <a href="https://www.bbc.com/news/articles/ck5ynwz9gy67o" target="_blank" rel="noopener noreferrer">BBC · 3 nov. 2026 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+            `,
+            notes: "Presenta el caso con atribución: Reuters y BBC informaron el 3 de noviembre de 2026 sobre un robo de aproximadamente 6.3 mil millones de dólares a Binance. Las notas de prensa describieron entrevistas laborales falsas y una tarea técnica maliciosa como parte de la intrusión. Subraya que esto no fue una suplantación mediante letras de otros alfabetos; fueron tácticas de ingeniería social y malware. No añadas detalles técnicos sobre cómo ejecutar o esconder el malware. Para quienes buscan empleo, la lección es verificar la empresa y el proceso por canales oficiales y no ejecutar código o archivos no verificados enviados como prueba técnica."
+          },
+          {
+            title: "Homógrafos (2017): una demostración con Apple",
+            type: "solution",
+            content: `
+              <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-xs space-y-2">
+                <p class="text-emerald-900">En 2017, el investigador Xudong Zheng demostró que un dominio hecho con letras cirílicas podía parecerse visualmente a <strong>apple.com</strong>. Fue una prueba de concepto sobre el riesgo de los dominios Unicode, no evidencia de que Apple hubiera sufrido un robo.</p>
+                <div class="grid grid-cols-2 gap-2 text-center">
+                  <div class="p-2 bg-white border border-emerald-200 rounded"><strong>a</strong><br><span class="text-slate-600">Latina · U+0061</span></div>
+                  <div class="p-2 bg-white border border-emerald-200 rounded"><strong>а</strong><br><span class="text-slate-600">Cirílica · U+0430</span></div>
+                </div>
+                <p class="text-emerald-900">Verifica el dominio completo y llega a servicios importantes desde su aplicación oficial o un marcador guardado; no te guíes solo por el logotipo o el candado HTTPS.</p>
+                <div class="news-links slide-sources mt-3">
+                  <a href="https://www.xudongz.com/blog/2017/idn-phishing/" target="_blank" rel="noopener noreferrer">Demostración de Xudong Zheng <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  <a href="https://www.unicode.org/reports/tr39/" target="_blank" rel="noopener noreferrer">Estándar Unicode sobre caracteres confundibles <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+            `,
+            notes: "Distingue claramente esta técnica del caso de Binance. En 2017, el investigador Xudong Zheng publicó una demostración de un dominio visualmente parecido a apple.com formado con caracteres cirílicos; no presentes la demostración como una intrusión o robo confirmado contra Apple. Compara la a latina U+0061 y la a cirílica U+0430 sin mostrar ni enlazar un dominio de imitación. Unicode documenta caracteres confundibles y sus riesgos. Cierra con una recomendación práctica: escribir o abrir el dominio por una ruta confiable, revisar la dirección completa y no confiar solo en la apariencia de la página. Transición: «Además de imitar una dirección, algunos engaños intentan capturar una sesión; veamos por qué MFA ayuda, pero no siempre basta»."
+          }
+        ]
+      },
+      {
         id: 10,
+        category: "MÓDULO 3: AMENAZAS EN LA AUTENTICACIÓN",
+        title: "MFA: protección útil, pero no infalible",
+        cards: [
+          {
+            title: "Cuando un engaño intenta interceptar la sesión",
+            type: "problem",
+            content: `
+              <div class="p-3 bg-red-50 border border-red-200 rounded-lg text-xs space-y-1">
+                <span class="font-bold text-red-900 block">Algunos ataques de phishing retransmiten el inicio de sesión</span>
+                <p class="text-red-800">Una página falsa puede intermediar entre la persona y el servicio legítimo e intentar robar credenciales o tokens de sesión. El MFA común reduce el riesgo, pero no detiene todos los ataques de intermediario.</p>
+              </div>
+            `,
+            notes: "Explica el ataque a nivel conceptual: una página falsa puede colocarse entre la persona y el servicio legítimo, retransmitir el inicio de sesión y tratar de capturar credenciales o una sesión autenticada. No hace falta explicar herramientas ni pasos técnicos; el punto es que una página que parece real puede intentar engañar incluso cuando existe MFA. Aclara que esto no ocurre en todos los ataques y que MFA sigue reduciendo muchos riesgos. La siguiente tarjeta muestra opciones que pueden ofrecer una protección más resistente al phishing. Puedes comparar el proceso con entregar una llave en una recepción falsa: el servicio parece familiar, pero el destino no es el correcto. Por eso hay que comprobar el dominio y llegar a las cuentas desde marcadores o aplicaciones oficiales cuando sea posible. Evita que el ejemplo deje la impresión de que MFA es inútil; es una capa valiosa, y la recomendación es complementarla con métodos adecuados y verificación del contexto."
+          },
+          {
+            title: "Prefiere autenticación resistente al phishing",
+            type: "solution",
+            content: `
+              <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-xs space-y-1">
+                <span class="font-bold text-emerald-900 block">Usa las opciones aprobadas por la organización</span>
+                <ul class="list-disc list-inside space-y-1 text-emerald-800">
+                  <li>Prefiere passkeys o llaves de seguridad cuando estén disponibles.</li>
+                  <li>Si usas notificaciones MFA, aprueba solo las que tú iniciaste.</li>
+                  <li>Rechaza solicitudes inesperadas y avisa a soporte.</li>
+                </ul>
+              </div>
+            `,
+            notes: "Recomienda passkeys o llaves de seguridad cuando estén disponibles y aprobadas por la organización, ya que pueden ayudar a resistir páginas de phishing. Si llega una notificación MFA que la persona no inició, debe rechazarla y reportarla; nunca conviene aprobarla para quitarse la molestia. Pide al grupo que recuerde que soporte puede orientar sobre los métodos permitidos para sus cuentas. Presenta estas opciones como reducción del riesgo, no como garantía absoluta. Diferencia las alternativas sin hacer una competencia de productos: lo esencial es escoger un método permitido y comprender qué hacer ante una solicitud inesperada. Si alguien recibe varias notificaciones seguidas, debe dejar de interactuar con ellas y reportar el evento, no responder a llamadas que pidan códigos. Una buena pregunta para el grupo es: ¿qué harías si aparece una aprobación justo cuando no estás iniciando sesión? La respuesta debe ser rechazar, verificar y avisar."
+          }
+        ]
+      },
+      {
+        id: 11,
         category: "MÓDULO 4: DEFENSAS Y SOLUCIONES",
         title: "Autenticación Nivel 1 — Bóvedas de Contraseñas",
         cards: [
@@ -382,7 +497,7 @@ window.slidesData = [
         ]
       },
       {
-        id: 11,
+        id: 12,
         category: "MÓDULO 4: DEFENSAS Y SOLUCIONES",
         title: "Autenticación Nivel 2 — MFA y Coincidencia de Números",
         cards: [
@@ -408,12 +523,12 @@ window.slidesData = [
             content: `
               <p class="text-xs text-emerald-800 font-bold">La app pide confirmar un número mostrado durante el inicio de sesión. Esto ayuda a evitar aprobaciones a ciegas, pero no convierte todos los métodos MFA en resistentes al phishing.</p>
             `,
-            notes: "Explica el funcionamiento de forma breve: la aplicación muestra un número y la persona debe seleccionar o escribir el que aparece en la pantalla del inicio de sesión. Esto reduce las aprobaciones a ciegas y ayuda a distinguir solicitudes, pero no convierte el método en una passkey ni detiene todos los ataques de intermediario. Si la persona no inició el acceso o no reconoce la pantalla, debe cancelar y reportar, incluso si ve un número. Preséntalo como una mejora concreta, no como protección perfecta. Puedes contrastarlo con una notificación que solo pregunta “¿Aprueba?”: al pedir comparar números, hay más contexto y menos oportunidad de aceptar por costumbre. Aun así, si el acceso no lo inició la persona, el número no debe tratarse como prueba suficiente para continuar. Recuerda al grupo que la política de la organización define qué métodos están habilitados y a quién informar ante una solicitud inesperada."
+            notes: "Explica el funcionamiento de forma breve: la aplicación muestra un número y la persona debe seleccionar o escribir el que aparece en la pantalla del inicio de sesión. Esto reduce las aprobaciones a ciegas y ayuda a distinguir solicitudes, pero no convierte el método en una passkey ni detiene todos los ataques de intermediario. Si la persona no inició el acceso o no reconoce la pantalla, debe cancelar y reportar, incluso si ve un número. Preséntalo como una mejora concreta, no como protección perfecta. Puedes contrastarlo con una notificación que solo pregunta “¿Aprueba?”: al pedir comparar números, hay más contexto y menos oportunidad de aceptar por costumbre. Aun así, si el acceso no lo inició la persona, el número no debe tratarse como prueba suficiente para continuar. Recuerda al grupo que la política de la organización define qué métodos están habilitados y a quién informar ante una solicitud inesperada. Transición: «Otra alternativa, cuando el servicio la admite, es una credencial vinculada al sitio: las passkeys»."
           }
         ]
       },
       {
-        id: 12,
+        id: 13,
         category: "MÓDULO 4: DEFENSAS Y SOLUCIONES",
         title: "Autenticación Nivel 3 — Passkeys (FIDO2)",
         cards: [
@@ -429,12 +544,12 @@ window.slidesData = [
                 <p class="text-orange-900 font-semibold">Las passkeys usan criptografía vinculada al servicio y ayudan a resistir el phishing. Protege también el dispositivo y sus opciones de recuperación.</p>
               </div>
             `,
-            notes: "Describe la idea sin profundizar en matemáticas: el servicio guarda una clave pública y el dispositivo o autenticador conserva la clave privada, que no se escribe en una página web. El autenticador vincula la respuesta al servicio correcto; por eso una página falsa no puede simplemente reutilizar una contraseña como lo haría en un engaño común. Las passkeys pueden reducir mucho el phishing, pero siguen siendo importantes el bloqueo del dispositivo, sus actualizaciones y una recuperación segura de la cuenta. Indica que su disponibilidad depende del servicio y de las opciones autorizadas. Para hacerlo intuitivo, puedes decir que el dispositivo demuestra que posee una credencial para el sitio legítimo, sin revelar una contraseña que la persona tenga que teclear. No es necesario explicar algoritmos ni prometer que una passkey resuelve todos los problemas de seguridad. También importa proteger el dispositivo y saber cómo recuperar el acceso si se reemplaza o pierde; sigue siempre las instrucciones aprobadas para esa cuenta."
+            notes: "Describe la idea sin profundizar en matemáticas: el servicio guarda una clave pública y el dispositivo o autenticador conserva la clave privada, que no se escribe en una página web. El autenticador vincula la respuesta al servicio correcto; por eso una página falsa no puede simplemente reutilizar una contraseña como lo haría en un engaño común. Las passkeys pueden reducir mucho el phishing, pero siguen siendo importantes el bloqueo del dispositivo, sus actualizaciones y una recuperación segura de la cuenta. Indica que su disponibilidad depende del servicio y de las opciones autorizadas. Para hacerlo intuitivo, puedes decir que el dispositivo demuestra que posee una credencial para el sitio legítimo, sin revelar una contraseña que la persona tenga que teclear. No es necesario explicar algoritmos ni prometer que una passkey resuelve todos los problemas de seguridad. También importa proteger el dispositivo y saber cómo recuperar el acceso si se reemplaza o pierde; sigue siempre las instrucciones aprobadas para esa cuenta. Transición: «La autenticación es una parte de la seguridad; ahora veamos cómo una voz o un video también pueden usarse para suplantar a alguien»."
           }
         ]
       },
       {
-        id: 13,
+        id: 14,
         category: "MÓDULO 5: AMENAZAS CON IA",
         title: "IA Ofensiva: Deepfakes y Clonación de Voz",
         cards: [
@@ -455,14 +570,14 @@ window.slidesData = [
                 <li><strong>Palabra de Seguridad (Code Word):</strong> Código verbal secreto acordado en persona.</li>
               </ul>
             `,
-            notes: "Presenta la verificación fuera de banda como una forma de comprobar la solicitud usando un canal independiente: termina la llamada y devuelve el contacto a un número oficial que ya tengas guardado o puedas consultar de forma confiable. Para solicitudes familiares sensibles, una palabra de seguridad acordada previamente puede servir como apoyo, siempre que se mantenga privada y no se comparta en redes. No uses el número que te dicta la persona que llama ni sigas instrucciones bajo presión. Estas medidas también sirven ante suplantaciones sin IA. En un entorno laboral, verifica solicitudes de pagos o cambios de cuenta mediante el procedimiento establecido y con una persona autorizada, aunque el mensaje parezca venir de un directivo conocido. Una doble comprobación puede parecer menos rápida, pero evita que la urgencia dicte una decisión irreversible. Si no logras confirmar, espera y consulta a tu equipo o supervisor por el canal habitual."
+            notes: "Presenta la verificación fuera de banda como una forma de comprobar la solicitud usando un canal independiente: termina la llamada y devuelve el contacto a un número oficial que ya tengas guardado o puedas consultar de forma confiable. Para solicitudes familiares sensibles, una palabra de seguridad acordada previamente puede servir como apoyo, siempre que se mantenga privada y no se comparta en redes. No uses el número que te dicta la persona que llama ni sigas instrucciones bajo presión. Estas medidas también sirven ante suplantaciones sin IA. En un entorno laboral, verifica solicitudes de pagos o cambios de cuenta mediante el procedimiento establecido y con una persona autorizada, aunque el mensaje parezca venir de un directivo conocido. Una doble comprobación puede parecer menos rápida, pero evita que la urgencia dicte una decisión irreversible. Si no logras confirmar, espera y consulta a tu equipo o supervisor por el canal habitual. Transición: «Además de reconocer engaños con IA, también debemos cuidar qué información introducimos en herramientas de IA»."
           }
         ]
       },
       {
-        id: 14,
+        id: 15,
         category: "MÓDULO 5: AMENAZAS CON IA",
-        title: "Uso Seguro de la IA en la Empresa (Gobernanza)",
+        title: "Uso Seguro de la IA en la Empresa",
         cards: [
           {
             title: "Protege la información al usar herramientas de IA",
@@ -482,39 +597,56 @@ window.slidesData = [
                 📌 Regla práctica: comparte solo la información necesaria y anonimízala cuando esté permitido.
               </div>
             `,
-            notes: "Distingue entre usar una herramienta autorizada y asumir que cualquier servicio protege la información de la misma manera. El tratamiento de los datos depende del servicio, su configuración y los acuerdos aplicables; ni el precio ni una etiqueta empresarial bastan por sí solos para confirmarlo. Sigue la política de la organización y no pegues credenciales, datos personales, código privado ni información confidencial en una herramienta que no esté aprobada. Cuando esté permitido, comparte solo lo necesario y elimina o anonimiza detalles identificables. Si hay dudas, consulta a TI o al área responsable antes de cargar la información. Puedes explicar que incluso una pregunta aparentemente sencilla puede incluir nombres de clientes, cifras internas o fragmentos de documentos que no se deberían divulgar. Antes de copiar contenido, identifica su clasificación y confirma si el uso está permitido para ese caso concreto. También revisa las respuestas generadas antes de utilizarlas: pueden contener errores, información inventada o sesgos. La herramienta puede apoyar el trabajo, pero la persona sigue siendo responsable de validar el resultado y proteger los datos."
-          }
-        ]
-      },
-      {
-        id: 15,
-        category: "MÓDULO 6: PROTOCOLOS Y RESUMEN",
-        title: "Gobernanza, Protocolo Antipánico y Próximos Pasos",
-        cards: [
-          {
-            title: "1. 🏛️ Gobernanza (NIST CSF 2.0 & ISO 27001:2022)",
-            type: "info",
-            content: `
-              <p class="text-xs text-slate-700">La dirección define prioridades, responsables y tolerancia al riesgo. NIST CSF 2.0 incluye la función Govern; ISO/IEC 27001:2022 contempla inteligencia sobre amenazas en el control 5.7.</p>
-            `,
-            notes: "Presenta NIST CSF e ISO/IEC 27001 como marcos que ayudan a las organizaciones a ordenar responsabilidades, prioridades y controles; la audiencia no necesita memorizar funciones o números de control. La gobernanza significa que alguien define quién decide, qué se protege primero y cómo se revisan los riesgos. En el día a día, las personas contribuyen siguiendo los procedimientos, cuidando la información y reportando señales a tiempo. Usa el ejemplo para conectar las políticas con tareas cotidianas, no como una exposición técnica sobre certificaciones. Puedes ilustrar la idea con una pregunta: si llega un incidente, ¿quién debe recibir el aviso y quién decide las medidas de respuesta? Tener responsabilidades claras reduce la improvisación y ayuda a priorizar. No presentes un marco como una garantía de que nunca ocurrirá un incidente; son referencias para gestionar y mejorar la seguridad de manera organizada. Enlaza gobernanza con los protocolos de la siguiente tarjeta: las reglas son útiles cuando las personas saben cómo aplicarlas."
-          },
-          {
-            title: "2. 🚨 Si sospechas un incidente: detente y reporta",
-            type: "solution",
-            content: `
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs font-bold">
-                <div class="p-3 bg-orange-50 rounded border">1. DETENER<br><span class="text-[10px] font-normal">No sigas el enlace ni compartas códigos</span></div>
-                <div class="p-3 bg-orange-50 rounded border">2. REPORTAR<br><span class="text-[10px] font-normal">Contacta a TI por el canal oficial</span></div>
-                <div class="p-3 bg-orange-50 rounded border">3. SEGUIR INDICACIONES<br><span class="text-[10px] font-normal">No borres evidencia ni cambies claves desde el equipo afectado</span></div>
-              </div>
-            `,
-            notes: "Recorre la secuencia con calma: detén la interacción sospechosa, reporta pronto por un canal oficial y sigue las indicaciones del equipo responsable. Esto aplica aunque la persona solo tenga dudas o crea que ya hizo clic, compartió un código o aprobó un acceso; reportar pronto ayuda a evaluar el caso. No prometas que no habrá consecuencias y evita recomendar acciones improvisadas, como borrar mensajes, desconectar equipos o cambiar claves desde el dispositivo afectado; soporte determinará la respuesta adecuada. Cierra esta tarjeta invitando a practicar con el simulador y luego a revisar los hábitos en la autoevaluación. Recuérdales que al reportar resulta útil describir qué ocurrió, aproximadamente cuándo y qué cuenta o dispositivo podría estar involucrado, usando el canal autorizado. No envíen contraseñas ni códigos en el reporte. La rapidez importa más que tener una explicación completa: el equipo responsable puede hacer preguntas y decidir las acciones técnicas. Normalizar el reporte temprano ayuda a reducir el impacto y permite aprender de las situaciones."
+            notes: "Distingue entre usar una herramienta autorizada y asumir que cualquier servicio protege la información de la misma manera. El tratamiento de los datos depende del servicio, su configuración y los acuerdos aplicables; ni el precio ni una etiqueta empresarial bastan por sí solos para confirmarlo. Sigue la política de la organización y no pegues credenciales, datos personales, código privado ni información confidencial en una herramienta que no esté aprobada. Cuando esté permitido, comparte solo lo necesario y elimina o anonimiza detalles identificables. Si hay dudas, consulta a TI o al área responsable antes de cargar la información. Puedes explicar que incluso una pregunta aparentemente sencilla puede incluir nombres de clientes, cifras internas o fragmentos de documentos que no se deberían divulgar. Antes de copiar contenido, identifica su clasificación y confirma si el uso está permitido para ese caso concreto. También revisa las respuestas generadas antes de utilizarlas: pueden contener errores, información inventada o sesgos. La herramienta puede apoyar el trabajo, pero la persona sigue siendo responsable de validar el resultado y proteger los datos. Transición: «Si algo sale mal pese a estas medidas, detén la interacción y reporta pronto»."
           }
         ]
       },
       {
         id: 16,
+        category: "MÓDULO 6: PROTOCOLOS Y RESUMEN",
+        title: "Protocolo ante incidentes y próximos pasos",
+        cards: [
+          {
+            title: "1. Si sospechas un incidente: detente y reporta",
+            type: "solution",
+            content: `
+              <div class="incident-protocol">
+                <article class="incident-action incident-stop">
+                  <span class="incident-action-number">01</span>
+                  <div><strong>Detén la interacción</strong><p>No abras más enlaces ni compartas claves, códigos o aprobaciones.</p></div>
+                </article>
+                <article class="incident-action incident-report">
+                  <span class="incident-action-number">02</span>
+                  <div><strong>Reporta pronto</strong><p>Contacta a TI por el canal oficial, incluso si solo tienes una duda o cometiste un error.</p></div>
+                </article>
+                <article class="incident-action incident-follow">
+                  <span class="incident-action-number">03</span>
+                  <div><strong>Sigue las indicaciones</strong><p>Explica qué pasó y cuándo. No borres mensajes ni cambies claves desde el dispositivo afectado salvo que soporte te lo indique.</p></div>
+                </article>
+              </div>
+            `,
+            notes: "Explica la secuencia sin alarmar: detén la interacción, reporta pronto por un canal oficial y sigue las instrucciones del equipo responsable. Reportar es útil aunque la persona solo tenga dudas o ya haya hecho clic; no hay que esperar a tener una explicación completa. Al informar, indica qué ocurrió y cuándo, pero nunca envíes contraseñas ni códigos. No borres mensajes ni cambies claves desde el dispositivo afectado salvo que soporte indique cómo proceder."
+          },
+          {
+            title: "2. Elige un próximo paso concreto",
+            type: "info",
+            content: `
+              <div class="next-steps-panel">
+                <p>Al terminar esta sesión, elige una acción sencilla para aplicar hoy:</p>
+                <ul>
+                  <li><i class="fa-solid fa-key" aria-hidden="true"></i><span>Activa MFA en una cuenta importante con el método recomendado.</span></li>
+                  <li><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i><span>Configura el bloqueo de pantalla y las actualizaciones de tu dispositivo.</span></li>
+                  <li><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Identifica el canal oficial para reportar una solicitud sospechosa.</span></li>
+                </ul>
+                <strong>Reconoce · Pausa · Verifica · Reporta</strong>
+              </div>
+            `,
+            notes: "Invita a cada persona a escoger una acción pequeña y realista para aplicar hoy; no es necesario hacer todo al mismo tiempo. Sugiere activar MFA, comprobar el bloqueo y las actualizaciones del dispositivo o ubicar el canal oficial de soporte. Cierra con la secuencia de la sesión: reconoce, pausa, verifica y reporta."
+          }
+        ]
+      },
+      {
+        id: 17,
         category: "MÓDULO 6: PROTOCOLOS Y RESUMEN",
         title: "Gracias: la seguridad la construimos entre todos",
         cards: [
